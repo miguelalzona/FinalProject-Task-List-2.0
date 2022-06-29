@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet"  href="style.css">
+    <script defer src="./index.js"></script>
+    <title>Task Project</title>
+</head>
+<body>
+    <section class="vh-100" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364)">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-9 col-xl-7">
+              <div class="card rounded-3">
+                <div class="card-body p-4">
+      
+                  <h4 class="text-center my-3 pb-3">Task List</h4>
+      
+                  <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+                    <div class="col-12">
+                      <div class="form-outline">
+                        <input type="text" id="form1" class="form-control" />
+                        <label class="form-label" for="form1">Enter a task here</label>
+                      </div>
+                    </div>
+
+                    
+                    <div class="col-12">
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='./form.html';">Add</button>
+                        
+                      </div>
+                    
+        
+                      <div class="col-12">
+                        <button onclick="alert('Come Back Later!')" type="button" class="btn btn-warning">Get tasks</button>
+                      </div>
+                  </form>
+      
+                  <table class="table mb-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Project</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Design App for Commbank</td>
+                        <td>In progress</td>
+                        <td>
+                          <button onclick="alert('Are You Sure?')" type="button" class="btn btn-outline-danger">Delete</button>
+                          <button onclick="alert('Well Done!')" type="button" class="btn btn-outline-success">Finished</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>New website for Bupa</td>
+                        <td>In progress</td>
+                        <td>
+                          <button onclick="alert('Are You Sure?')" type="Button" class="btn btn-outline-danger">Delete</button>
+                          <button onclick="alert('Well Done!')" type="button" class=" btn btn-outline-success">Finished</button>
+                          
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>City of Casey website</td>
+                        <td>In progress</td>
+                        <td>
+                          <button onclick="alert('Are You Sure?')" type="button" class="btn btn-outline-danger">Delete</button>
+                          <button onclick="alert('Well Done!')" type="button" class= "btn btn-outline-success">Finished</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>   
+    
+</body>
+</html>
