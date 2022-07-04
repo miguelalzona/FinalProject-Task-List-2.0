@@ -204,7 +204,7 @@ button {
   outline: none;
   cursor: pointer;
   border: 1px solid;
-  background-color: #58afd1;
+  background-color: orangered;
   border-radius: 5px;
   color: #ffffff;
 }
@@ -295,7 +295,7 @@ button {
   padding: 2rem;
   margin-top: 1rem;
   border-radius: 5px;
-  background-color: white;
+  background-color: lightgray;
   box-shadow: 0 0.2rem 0.4rem 0 black;
 }
 
@@ -323,7 +323,7 @@ button {
   height: 200px;
   word-wrap: break-word;
   margin: 1rem;
-  background-color: white;
+  background-color: lightgray;
   box-shadow: 0 0.2rem 0.4rem 0 black;
 }
 
