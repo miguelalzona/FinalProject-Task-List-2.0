@@ -367,5 +367,9 @@ button {
   }
 }
 
-
+.footer-byline {
+  color:ghostwhite;
+  display:flex;
+  justify-content:center;
+}
 
