@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const clock = document.querySelector("#clock");
     const date = document.querySelector('#date');
     
-    let hours = timeDate.getHours() % 12;
+    let hours = timeDate.getHours() % 24;
     let minutes = timeDate.getMinutes();
+    let seconds = timeDate.getSeconds();
     let dayOrNight = '';
     
     if (hours.toString().length < 2) {
@@ -19,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
       minutes = '0' + minutes;
     }
 
+    if (seconds.toString().length < 2) {
+      seconds = '0' + seconds;
+    }
+
     if (timeDate.getHours() < 12) {
       dayOrNight = 'AM';
     } else {
@@ -27,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const today = days[timeDate.getDay()];
   
-    const clockOutput = hours + ' : ' + minutes + ' ' + dayOrNight;
+    const clockOutput = hours + ' : ' + minutes + ' : ' + seconds + ' ' + dayOrNight;
     const dateOutput = 'Looks like another ' + today + ' 😊 ';
   
     clock.textContent = clockOutput;
