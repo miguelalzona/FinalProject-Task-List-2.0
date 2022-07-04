@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const clock = document.querySelector("#clock");
     const date = document.querySelector('#date');
     
-    let hours = timeDate.getHours() % 24;
+    let hours = timeDate.getHours() % 12;
     let minutes = timeDate.getMinutes();
     let seconds = timeDate.getSeconds();
     let dayOrNight = '';
