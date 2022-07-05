@@ -82,6 +82,7 @@ const del = document.querySelector(".del");
 const cancel = document.querySelector(".cancel");
 const addcard = document.querySelector(".addcard");
 const addNew = document.querySelector(".addnew");
+const done = document.querySelector(".done");
 
 console.log(flashContainerBox);
 
@@ -105,14 +106,16 @@ let contentArray = localStorage.getItem("items")
   flashContainerBox.style.display = "block";
 });
 
+
+
 function flashDiv(text) {
   let div = document.createElement("div");
   let divTitle = document.createElement("h2");
   let divDescription = document.createElement("h2");
   let divAssignto = document.createElement("h2");
   let divDuedate = document.createElement("h2");
-  let divDoneButton= document.createElement("Done");
-  let divDelButton= document.createElement("Del");
+  
+
   div.className = "flashcard";
 
   divTitle.setAttribute("style","border-top:1px solid teal; padding: 15px;  font-size: 16px; margin-top:30px ");
@@ -127,31 +130,39 @@ function flashDiv(text) {
   divDuedate.setAttribute("style", "text-align:center; display:none; font-size: 10px; color:red");
   divDuedate.innerHTML = text.duedate;
 
+  let btn = document.createElement("button");
+  btn.innerHTML = "Done";
+  btn.type = "submit";
+  
+  btn.setAttribute("style", "text-align:centre; display:absolute; jastify-content: space-between;");
+
+  let btn2 = document.createElement("button");
+  btn2.innerHTML = "Delete";
+  btn2.type = "submit";
+  btn.setAttribute("style", "text-align:centre; display:absolute;");
+
+
+  div.appendChild(btn);
   div.appendChild(divTitle);
   div.appendChild(divDescription);
   div.appendChild(divAssignto);
   div.appendChild(divDuedate);
-  div.appendChild(divDone);
-  div.appendChild(divDel);
+  div.appendChild(btn);
+  div.appendChild(btn2);
 
   div.addEventListener("click", function () {
     if (divDescription.style.display == "none") {
-      divDescription.style.display = "block";
-    } else {
-      divDescription.style.display = "none";
-    }
+     divDescription.style.display = "block";
+    } 
     if (divAssignto.style.display == "none") {
       divAssignto.style.display = "block";
-    } else {
-      divAssignto.style.display = "none";
-    }
+    } 
     if (divDuedate.style.display == "none") {
       divDuedate.style.display = "block";
-    } else {
-      divDuedate.style.display = "none";
-    }
+    } 
+    
 
-  });
+});
 
   flashCards.appendChild(div);
 }
@@ -162,6 +173,7 @@ function flashDiv(text) {
     description: description.value,
     assignto: assignto.value,
     duedate: duedate.value,
+    
   };
 
   contentArray.push(flashInfo);
@@ -171,7 +183,12 @@ function flashDiv(text) {
   description.value = "";
   assignto.value = "";
   duedate.value = "";
+  
 });
+
+//button action//
+
+//End button action//
 
 //Form Validation//
 
@@ -214,26 +231,26 @@ function actionForm()
         if(input.value != '')
         {
           input.nextElementSibling.textContent  = "";
-          input.style.border = '2px  solid green';
+          input.style.border =    '2px  solid green';
         }
         
         
         if(title.value.length < 8 )
         {
           title.nextElementSibling.textContent = "8"; 
-          input.style.border                   = "1px solid red";
+          input.style.border =       "1px solid red";
         }
         
         if(description.value.length < 15 )
         {
           description.nextElementSibling.textContent = "15"; 
-          input.style.border                      = "1px solid red";
+          input.style.border =              "1px solid red";
         }
         
         if(input.value == '')
         {
           input.nextElementSibling.textContent = "Fill the fields";
-          input.style.border                   = '1px  solid red';
+          input.style.border =                    '1px  solid red';
         }
         
          
@@ -241,7 +258,8 @@ function actionForm()
     }
 
     
-    
+
+
 
 
 
