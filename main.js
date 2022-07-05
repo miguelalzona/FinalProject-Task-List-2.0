@@ -147,23 +147,17 @@ function flashDiv(text) {
 
   div.addEventListener("click", function () {
     if (divDescription.style.display == "none") {
-      divDescription.style.display = "block";
-    } else {
-      divDescription.style.display = "none";
-    }
+     divDescription.style.display = "block";
+    } 
     if (divAssignto.style.display == "none") {
       divAssignto.style.display = "block";
-    } else {
-      divAssignto.style.display = "none";
-    }
+    } 
     if (divDuedate.style.display == "none") {
       divDuedate.style.display = "block";
-    } else {
-      divDuedate.style.display = "none";
-    }
+    } 
     
 
-  });
+});
 
   flashCards.appendChild(div);
 }
@@ -186,6 +180,10 @@ function flashDiv(text) {
   duedate.value = "";
   
 });
+
+//button action//
+
+//End button action//
 
 //Form Validation//
 
