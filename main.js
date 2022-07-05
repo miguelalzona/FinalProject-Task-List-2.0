@@ -111,7 +111,8 @@ function flashDiv(text) {
   let divDescription = document.createElement("h2");
   let divAssignto = document.createElement("h2");
   let divDuedate = document.createElement("h2");
-
+  let divDoneButton= document.createElement("Done");
+  let divDelButton= document.createElement("Del");
   div.className = "flashcard";
 
   divTitle.setAttribute("style","border-top:1px solid teal; padding: 15px;  font-size: 16px; margin-top:30px ");
@@ -130,6 +131,8 @@ function flashDiv(text) {
   div.appendChild(divDescription);
   div.appendChild(divAssignto);
   div.appendChild(divDuedate);
+  div.appendChild(divDone);
+  div.appendChild(divDel);
 
   div.addEventListener("click", function () {
     if (divDescription.style.display == "none") {
