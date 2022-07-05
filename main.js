@@ -203,12 +203,12 @@ function actionForm()
         assignto     =    document.getElementById('assignto'),
         duedate    =    document.getElementById('duedate')
         
-        if(title.value == "")
+        if(title.value == "" && title.value.length < 8)
         {
          document.getElementById('p-title').textContent    = "Title Must be at least 8 characters";  
          document.getElementById('title').style.border = "1px solid red";
         }
-        if(description.value == "")
+        if(description.value == "" && description.value.length < 15)
         {
          document.getElementById('p-description').textContent = "Description Must be at least 15 characters";
          document.getElementById('description').style.border = "1px solid red";
