@@ -211,7 +211,7 @@ button {
 .cancel:hover {
   background-color: #eb196e;
 }
-.done {
+.btn {
   padding: 3px;
   outline: none;
   cursor: pointer;
@@ -219,8 +219,10 @@ button {
   background-color: green;
   border-radius: 2px;
   color: #ffffff;
+  position:absolute;
+  bottom:-130px;
 }
-.delete {
+.btn2 {
   padding: 3px;
   outline: none;
   cursor: pointer;
@@ -228,7 +230,16 @@ button {
   background-color: red;
   border-radius: 2px;
   color: #ffffff;
-}
+  position:absolute;
+  right:1550px;
+  bottom:-130px;
+  }
+  .btn:hover{
+    background-color: #eb196e;
+  }
+  .btn2:hover{
+    background-color: #eb196e;
+  }
 
 .flashcontainer {
   width: 95%;
@@ -343,8 +354,17 @@ button {
   margin: 1rem;
   background-color: whitesmoke;
   box-shadow: 0 0.2rem 0.4rem 0 black;
+  transition: 400ms;
 }
-
+.flashcard:hover{
+background-color: peachpuff;
+}
+.flashcard.btn{
+  position:bottom;
+  text-align: center;
+  display: bottom;
+  bottom: 5px;
+}
 /*.flashcard h2 {
   font-size: 1rem;
 }*/

@@ -134,13 +134,17 @@ function flashDiv(text) {
   btn.innerHTML = "Done";
   btn.type = "submit";
   
-  btn.setAttribute("style", "text-align:centre; display:absolute; jastify-content: space-between;");
+  btn.setAttribute("style", "text-align:center; display:bottom; justify-content: space-between;");
 
   let btn2 = document.createElement("button");
   btn2.innerHTML = "Delete";
   btn2.type = "submit";
-  btn.setAttribute("style", "text-align:centre; display:absolute;");
-
+  btn.setAttribute("style", "text-align:bottom; display:absolute;");
+  btn2.addEventListener('click', e =>{
+      if (e.target.nodeName === 'BUTTON') {
+        e.target.parentNode.remove()
+      }
+  });
 
   div.appendChild(btn);
   div.appendChild(divTitle);
