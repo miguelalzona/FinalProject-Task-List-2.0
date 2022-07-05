@@ -320,16 +320,16 @@ button {
 
 .flashcard {
   width: 39rem;
-  height: 200px;
+  height: 250px;
   word-wrap: break-word;
   margin: 1rem;
   background-color: tan;
   box-shadow: 0 0.2rem 0.4rem 0 black;
 }
 
-.flashcard h2 {
+/*.flashcard h2 {
   font-size: 1rem;
-}
+}*/
 /*input */
 
 #p-title, #p-description, #p-assignto, #p-duedate {
