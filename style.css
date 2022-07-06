@@ -219,7 +219,7 @@ button {
   background-color: green;
   border-radius: 2px;
   color: #ffffff;
-  position:absolute;
+  position:relative;
   bottom:-130px;
 }
 .btn2 {
@@ -230,8 +230,7 @@ button {
   background-color: red;
   border-radius: 2px;
   color: #ffffff;
-  position:absolute;
-  right:1550px;
+  position:relative;
   bottom:-130px;
   }
   .btn:hover{

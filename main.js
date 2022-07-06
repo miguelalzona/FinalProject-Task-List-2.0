@@ -133,12 +133,14 @@ function flashDiv(text) {
   let btn = document.createElement("button");
   btn.innerHTML = "Done";
   btn.type = "submit";
+  btn.setAttribute("class", "btn");
   
   btn.setAttribute("style", "text-align:center; display:bottom; justify-content: space-between;");
 
   let btn2 = document.createElement("button");
   btn2.innerHTML = "Delete";
   btn2.type = "submit";
+  btn2.setAttribute("class", "btn2");
   btn.setAttribute("style", "text-align:bottom; display:absolute;");
   btn2.addEventListener('click', e =>{
       if (e.target.nodeName === 'BUTTON') {
@@ -195,6 +197,13 @@ function flashDiv(text) {
 //End button action//
 
 //Form Validation//
+document.getElementById("addButton").addEventListener("click", actionForm())
+
+function checkValidation(){
+  if(actionForm() === true){
+    flashDiv();
+  }
+}
 
 function actionForm()
     {
@@ -207,17 +216,20 @@ function actionForm()
         {
          document.getElementById('p-title').textContent    = "Title Must be at least 8 characters";  
          document.getElementById('title').style.border = "1px solid red";
+          return false
         }
         if(description.value == "" && description.value.length < 15)
         {
          document.getElementById('p-description').textContent = "Description Must be at least 15 characters";
          document.getElementById('description').style.border = "1px solid red";
+          return false
         }
          
         if(assignto.value == "")
         {
          document.getElementById('p-assignto').textContent = "Please provide the full name"; 
          document.getElementById('assignto').style.border = "1px solid red";
+          return false
         }
         
         
@@ -225,6 +237,7 @@ function actionForm()
         {
          document.getElementById('p-duedate').textContent = "Please select the due date";  
          document.getElementById('duedate').style.border = "1px solid red";
+          return false
         }
         
     }    
