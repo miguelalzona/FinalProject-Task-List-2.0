@@ -211,7 +211,7 @@ button {
 .cancel:hover {
   background-color: #eb196e;
 }
-.btn {
+/*.btn {
   padding: 3px;
   outline: none;
   cursor: pointer;
@@ -232,7 +232,7 @@ button {
   color: #ffffff;
   position:relative;
   bottom:-130px;
-  }
+  }*/
   .btn:hover{
     background-color: lightgreen;
   }
@@ -370,7 +370,7 @@ background-color: peachpuff;
 /*input */
 
 #p-title, #p-description, #p-assignto, #p-duedate {
-  color: red;
+  color: yellow;
 
 }
 /*input */
