@@ -222,25 +222,23 @@ function actionForm(event) {
     document.getElementById('p-title').textContent = "Title Must be at least 8 characters";
     document.getElementById('title').style.border = "1px solid yellow";
     console.log(event.target);
-    event.preventDefault();
-     return false
+    Event.preventDefault();
+     return false;
   }
   if (description.value == "" && description.value.length < 15) {
     document.getElementById('p-description').textContent = "Description Must be at least 15 characters";
     document.getElementById('description').style.border = "1px solid yellow";
     console.log(event.target);
-    event.preventDefault();
-
-     return false
+    Event.preventDefault();
+     return false;
   }
 
   if (assignto.value == "") {
     document.getElementById('p-assignto').textContent = "Please provide the full name";
     document.getElementById('assignto').style.border = "1px solid yellow";
     console.log(event.target);
-    event.preventDefault();
-
-     return false
+    Event.preventDefault();
+     return false;
   }
 
 
@@ -248,9 +246,8 @@ function actionForm(event) {
     document.getElementById('p-duedate').textContent = "Please select the due date";
     document.getElementById('duedate').style.border = "1px solid yellow";
     console.log(event.target);
-    event.preventDefault();
-
-     return false
+    Event.preventDefault();
+     return false;
   }
   
   addcard.addEventListener("click", function () {
@@ -280,22 +277,30 @@ function formBlur(input) {
   if (input.value != '') {
     input.nextElementSibling.textContent = "";
     input.style.border = '2px  solid green';
+    Event.preventDefault();
+    return false;
   }
 
 
   if (title.value.length < 8) {
     title.nextElementSibling.textContent = "8";
     input.style.border = "1px solid yellow";
+    Event.preventDefault();
+    return false;
   }
 
   if (description.value.length < 15) {
     description.nextElementSibling.textContent = "15";
     input.style.border = "1px solid yellow";
+    Event.preventDefault();
+    return false;
   }
 
   if (input.value == '') {
     input.nextElementSibling.textContent = "Fill the fields";
     input.style.border = '1px  solid yellow';
+    Event.preventDefault();
+    return false;
   }
 
 
