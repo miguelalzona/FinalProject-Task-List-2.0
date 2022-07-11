@@ -323,7 +323,7 @@ button {
   padding: 2rem;
   margin-top: 1rem;
   border-radius: 5px;
-  background-color: brown ;
+  background-color: white ;
   box-shadow: 0 0.2rem 0.4rem 0 black;
 }
 
@@ -406,7 +406,7 @@ background-color: peachpuff;
 
 .footer-byline {
   color:ghostwhite;
-  display:flex;
+  display:fixed;
   justify-content:center;
 }
 
