@@ -220,14 +220,14 @@ function actionForm(event) {
 
   if (title.value == "" && title.value.length < 8) {
     document.getElementById('p-title').textContent = "Title Must be at least 8 characters";
-    document.getElementById('title').style.border = "1px solid yellow";
+    document.getElementById('title').style.border = "1px solid red";
     console.log(event.target);
     event.preventDefault();
      return false;
   }
   if (description.value == "" && description.value.length < 15) {
     document.getElementById('p-description').textContent = "Description Must be at least 15 characters";
-    document.getElementById('description').style.border = "1px solid yellow";
+    document.getElementById('description').style.border = "1px solid red";
     console.log(event.target);
     event.preventDefault();
      return false;
@@ -235,7 +235,7 @@ function actionForm(event) {
 
   if (assignto.value == "") {
     document.getElementById('p-assignto').textContent = "Please provide the full name";
-    document.getElementById('assignto').style.border = "1px solid yellow";
+    document.getElementById('assignto').style.border = "1px solid red";
     console.log(event.target);
     event.preventDefault();
      return false;
@@ -244,7 +244,7 @@ function actionForm(event) {
 
   if (duedate.value < 1) {
     document.getElementById('p-duedate').textContent = "Please select the due date";
-    document.getElementById('duedate').style.border = "1px solid yellow";
+    document.getElementById('duedate').style.border = "1px solid red";
     console.log(event.target);
     event.preventDefault();
      return false;
@@ -284,21 +284,21 @@ function formBlur(input) {
 
   if (title.value.length < 8) {
     title.nextElementSibling.textContent = "8";
-    input.style.border = "1px solid yellow";
+    input.style.border = "1px solid red";
     event.preventDefault();
     return false;
   }
 
   if (description.value.length < 15) {
     description.nextElementSibling.textContent = "15";
-    input.style.border = "1px solid yellow";
+    input.style.border = "1px solid red";
     event.preventDefault();
     return false;
   }
 
   if (input.value == '') {
     input.nextElementSibling.textContent = "Fill the fields";
-    input.style.border = '1px  solid yellow';
+    input.style.border = '1px  solid red';
     event.preventDefault();
     return false;
   }
